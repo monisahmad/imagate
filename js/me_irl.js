@@ -1,6 +1,6 @@
   (function () {
     var container = document.querySelector(".container");
-    reddit.top("funny").t("day").limit(5000).fetch(function (res) {
+    reddit.top("me_irl").t("day").limit(5000).fetch(function (res) {
       for (var i = 0; i < res.data.children.length; i++) {
         var awwData = res.data.children[i].data;
         if(awwData.url.search("gif")>0){
@@ -28,7 +28,7 @@
         container.appendChild(box);}
         else if(awwData.url.search("v.redd")>0){}
         else if(awwData.url.search("giant")>0){}    
-        else if(awwData.url.search("a.imgur")>0){}
+        else if(awwData.url.search("imgur")>0){}
         else{
         //creating div for videos
         var permalink= "https://reddit.com"+awwData.permalink;

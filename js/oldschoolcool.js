@@ -1,6 +1,6 @@
   (function () {
     var container = document.querySelector(".container");
-    reddit.top("funny").t("day").limit(5000).fetch(function (res) {
+    reddit.top("oldschoolcool").t("day").limit(5000).fetch(function (res) {
       for (var i = 0; i < res.data.children.length; i++) {
         var awwData = res.data.children[i].data;
         if(awwData.url.search("gif")>0){
